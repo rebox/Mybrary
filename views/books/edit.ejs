@@ -1,0 +1,9 @@
+<h2>Edit book</h2>
+<!-- multipart is used when the file is selected via a regular file picker -->
+<!-- <form action="/books" method="POST" enctype="multipart/form-data"> -->
+<!-- With FilePond the multipart enctype is not needed -->
+<form action="/books/<%= book.id; %>?_method=PUT" method="POST">
+  <%- include('_form_fields'); %>
+  <a href="/books">Cancel</a>
+  <button type="submit">Update</button>
+</form>

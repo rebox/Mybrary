@@ -2,8 +2,10 @@
 <div style="display: flex">
   <% books.forEach(book => { %>
   <div style="margin-right: 8px">
-    <img height="150" width="100" src="<%= book.coverImagePath; %>" alt="" />
-    <div><%= book.title %></div>
+    <a href="/books/<%= book.id; %>">
+      <img height="150" width="100" src="<%= book.coverImagePath; %>" alt="" />
+      <div><%= book.title %></div>
+    </a>
   </div>
   <% }); %>
 </div>
